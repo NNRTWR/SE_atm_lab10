@@ -1,3 +1,5 @@
+//Thanwarat Sirichotevanich 6410451091
+
 package ku.atm;
 
 import io.cucumber.java.Before;
@@ -70,4 +72,8 @@ public class StepDefATM {
                      bank.getCustomer(id).getAccount().getBalance());
     }
 
+    @When("I deposited {double} bath into my account using ATM")
+    public void i_deposited_bath_into_my_account(double amount){
+        atm.deposit(amount);
+    }
 }
